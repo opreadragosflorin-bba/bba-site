@@ -1,0 +1,10 @@
+# Copii de siguranță locale
+*_BACKUP*
+
+# Fișiere de sistem
+.DS_Store
+Thumbs.db
+
+# Surse ale șablonului, nefolosite de site
+scss/
+prepros-6.config
