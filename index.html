@@ -36,6 +36,12 @@
       #gallery-pagination { margin-top: 30px; }
       #section-blog .blog-entry .img-wrap img { width: 100%; aspect-ratio: 5 / 4; object-fit: cover; }
       @media (min-width: 992px) { .main-content .photos .photo-item img { height: auto; aspect-ratio: 1 / 1; } }
+      /* Telefon/tabletă: toate secțiunile pe toată lățimea, ca Acasă; textul păstrează 15px față de margine */
+      @media (max-width: 991.98px) {
+        .main-content .container-fluid { padding-left: 0; padding-right: 0; }
+        .main-content .container-fluid > .row, #section-home .row { margin-left: 0; margin-right: 0; }
+        .main-content .site-section > .container, #section-home .row > div { padding-left: 15px; padding-right: 15px; }
+      }
     </style>
 
   </head>
