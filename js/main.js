@@ -244,8 +244,10 @@ jQuery(document).ready(function($) {
   var OnePageNavigation = function() {
     var navToggler = $('.site-menu-toggle');
    	$("body").on("click", ".main-menu li a[href^='#'], .smoothscroll[href^='#'], .site-mobile-menu .site-nav-wrap li a", function(e) {
-      e.preventDefault();
       var hash = this.hash;
+      // Link spre altă pagină (ex. din despre.html spre index.html#section-photos) sau extern: navigare normală.
+      if (!hash || this.pathname !== location.pathname || !$(hash).length) return;
+      e.preventDefault();
         $('html, body').animate({
           'scrollTop': $(hash).offset().top
         }, 800, 'swing', function(){
